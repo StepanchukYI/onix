@@ -21,8 +21,7 @@ class CreateMenusTable extends Migration
 	        $table->boolean( 'is_active' )->nullable()->default( 1 );
 	        $table->integer( 'position' )->nullable()->default( 1 );
 	        $table->string( 'page_position' )->nullable();
-	        $table->string('image')->nullable()->default(null);
-	        $table->string('style_class')->nullable()->default(null);
+	        $table->string('favicon')->nullable()->default(null);
 	        $table->timestamps();
 
 	        $table->foreign('parent_id')->references('id')->on('menus');

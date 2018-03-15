@@ -8,7 +8,223 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p,a,span,label,button,input{
+  font-family: 'Play', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+
+input[type="submit"],input[type="button"]{
+  cursor: pointer;
+}
+
+a:hover,a:focus,a:active{
+  text-decoration: underline;
+}
+
+img{
+  max-width: 100%;
+  width: auto;
+}
+
+header.site-header {
+  background: url(../img/header-background.jpg) no-repeat;
+  background-size: cover;
+}
+
+ul.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.menu-item {
+  display: inline-block;
+  margin-right: 50px;
+  position: relative;
+}
+
+li.menu-item a.yellow {
+  color: #FBC02D;
+}
+
+li.menu-item a {
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+li.menu-item a:hover,li.menu-item a:focus,li.menu-item a:active{
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-logo a img {
+  max-height: 100px;
+  height: auto;
+}
+
+.site-logo {
+  padding: 10px 0;
+}
+
+li.menu-item a.yellow .svg-inline--fa {
+  margin-right: 10px;
+}
+
+.main-menu li.menu-item:after {
+  background-color: #FBC02D;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.main-menu li.menu-item:hover:after{
+  width: 100%;
+}
+
+.top-contacts {
+  text-align: right;
+}
+
+.top-contacts p.white {
+  color: #fff;
+}
+
+.top-contacts p{
+  font-size: 12px;
+  margin: 0;
+}
+
+.top-contacts a.top-number {
+  color: #fff;
+  font-weight: bold;
+}
+
+.top-contacts a.top-number span.yellow {
+  color: #FBC02D;
+}
+
+.top-contacts button.btn.top-callback {
+  background: transparent;
+  color: #FBC02D;
+  border: 2px solid;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.top-contacts button.btn.top-callback {
+  background: transparent;
+  color: #FBC02D;
+  border: 2px solid;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 4px 16px;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.top-contacts button.btn.top-callback:hover,.top-contacts button.btn.top-callback:focus,.top-contacts button.btn.top-callback:active {
+  box-shadow: 0 0 11px #FBC02D;
+}
+
+h5.modal-title {
+  text-align: center;
+  width: 100%;
+  color: #FBC02D;
+}
+
+.modal-content {
+  background: rgba(0, 0, 0, 0.56);
+  border: none;
+  border-radius: 0;
+}
+
+.modal-header .close:focus {
+  outline: none;
+}
+
+.modal-header .close {
+  opacity: 1;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+}
+
+.modal-header .close span {
+  text-shadow: none;
+  color: #FBC02D;
+  font-size: 40px;
+  transition: 0.3s ease-in-out;
+}
+
+.modal-header {
+  position: relative;
+  border: none;
+}
+
+.modal-header .close:hover span,.modal-header .close:focus span,.modal-header .close:active span {
+  text-shadow: 0 0 6px #FBC02D;
+}
+
+.client-callback input[type="text"] {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: 'Play', sans-serif;
+  padding: 0 10px;
+  font-size: 18px;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.client-callback input[type="text"]:focus {
+  box-shadow: 0 0 11px #FBC02D;
+  outline: none;
+}
+
+#callBack-modal form {
+  text-align: center;
+}
+
+.client-callback input[type="submit"] {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #FBC02D;
+  background: transparent;
+  border: 2px solid;
+  transition: 0.3s ease-in-out;
+  margin: 10px 0;
+}
+
+.client-callback input[type="submit"]:hover, .client-callback input[type="submit"]:focus, .client-callback input[type="submit"]:active {
+  background: #fbc02d12;
+}
+
+.top-contacts a.top-number:hover, .top-contacts a.top-number:focus, .top-contacts a.top-number:active {
+  text-decoration: none;
 }

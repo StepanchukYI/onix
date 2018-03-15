@@ -14,8 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $slug
  * @property integer $position
  * @property string $page_position
- * @property string $image
- * @property string $style_class
+ * @property string $favicon
  *
  * Relationship
  * @property array $pagePositionList
