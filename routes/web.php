@@ -20,3 +20,8 @@ Route::get('/contacts', 'HomeController@contacts')->name('home');
 Route::get('/about', 'HomeController@about')->name('home');
 
 Route::get('/projects', 'HomeController@projects')->name('home');
+
+
+
+Route::post('/callback', 'EmailNotification@callback')->name('home');
+Route::post('/project', 'EmailNotification@projects')->name('home');

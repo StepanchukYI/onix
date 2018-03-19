@@ -8,8 +8,10 @@
 require('./bootstrap');
 require('./index');
 require('./mask');
+require('./counterup');
+require('./slick');
 
-window.Vue = require('vue');
+// window.Vue = require('vue');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
