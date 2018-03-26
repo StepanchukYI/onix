@@ -25,3 +25,7 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
 $factory->define(\App\Models\Menu::class, function (){
 	return [];
 });
+
+$factory->define(\App\Models\Category::class, function (){
+	return [];
+});

@@ -21,7 +21,7 @@
                             <ul class="navbar-nav main-menu">
                                 @foreach($menus as $menu)
                                 <li class="menu-item">
-                                    <a class="yellow" href="{{$menu->slug}}"><i class="{{$menu->favicon}}"></i>{{$menu->title}}</a>
+                                    <a class="yellow" href="{{url($menu->slug)}}"><i class="{{$menu->favicon}}"></i>{{$menu->title}}</a>
                                 </li>
                                 @endforeach
                             </ul>

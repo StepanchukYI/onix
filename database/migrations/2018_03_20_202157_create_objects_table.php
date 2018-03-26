@@ -16,7 +16,7 @@ class CreateObjectsTable extends Migration
 		Schema::create( 'objects', function ( Blueprint $table )
 		{
 			$table->increments( 'id' );
-			$table->integer( 'category_id' )->unsigned();
+			$table->unsignedInteger( 'category_id' );
 			$table->string( 'title' );
 			$table->string( 'slug' )->unique();
 			$table->text( 'description' );

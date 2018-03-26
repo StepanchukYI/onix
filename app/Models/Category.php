@@ -24,7 +24,6 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
 	#region Properties
-
 	/**
 	 * The attributes that are mass assignable.
 	 *
@@ -32,6 +31,7 @@ class Category extends Model
 	 */
 	protected $fillable = [
 		'title',
+		'main_category_id',
 		'slug',
 		'description',
 		'meta_title',
@@ -119,11 +119,36 @@ class Category extends Model
 	#region Relationships
 
 	/**
+	 * @param $query
+	 *
+	 * @return mixed
+	 */
+	public function scopeMain( $query )
+	{
+		return $query->where( 'main_category_id' , null );
+	}
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function subCategories()
+	{
+		return $this->hasMany( Category::class , 'main_category_id' );
+	}
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
+	public function mainCategory()
+	{
+		return $this->belongsTo( Category::class , 'main_category_id' );
+	}
+
+	/**
 	 * @return \Illuminate\Database\Eloquent\Builder
 	 */
 	public function getObjectsQueryAttribute()
 	{
-
 		return Object::where( 'category_id', $this->id );
 	}
 	#endregion

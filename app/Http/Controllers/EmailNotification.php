@@ -28,7 +28,8 @@ class EmailNotification extends Controller
 		{
 			$m->from( 'hello@app.com', 'Your Application' );
 
-			$m->to( 'bodunjo855@gmail.com', 'name' )->subject( 'Новый клиент для звонка' );
+			$m->to( 'bodunjo855@gmail.com', 'Евгений' )->subject( 'Новый клиент для звонка' );
+			$m->to( 'himichenkouu@gmail.com', 'Юрий' )->subject( 'Новый клиент для звонка' );
 		} );
 
 		return ['success' => true];

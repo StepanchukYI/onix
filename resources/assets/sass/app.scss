@@ -19,6 +19,7 @@ h1,h2,h3,h4,h5,h6{
 
 body {
   background: #F6F6F6;
+  overflow-x: hidden;
 }
 
 h1{
@@ -312,6 +313,7 @@ ul.categories-list li.category-item a:hover,ul.categories-list li.category-item 
 .sidebar-products {
   background: #0d0d0d;
   border: 2px solid #FBC02D;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.31);
 }
 
 .sidebar-products h4 svg {
@@ -900,7 +902,9 @@ ul.site-breadcrumb--list li.breadcrumb-item a.current-page{
 }
 
 .page-entry {
-  padding-top: 30px;
+  padding: 30px;
+  margin-top: 30px;
+  background: #0D0D0D linear-gradient(to right, #0D0D0D 0%, #2C323E 100%);
 }
 
 .categories-main-slider:before {
@@ -914,4 +918,124 @@ ul.site-breadcrumb--list li.breadcrumb-item a.current-page{
   transform: skewY(-375deg);
   z-index: -1;
   top: 40px;
+}
+
+.home-slider {
+  border: 4px solid #FBC02D;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.23);
+}
+
+.slider-item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contacts-info ul.contacts-info--list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.info-item svg, li.info-item p {
+  display: inline-block;
+  margin: 0;
+}
+
+li.info-item p {
+  padding-left: 15px;
+}
+
+ul.contacts-info--list li.info-item {
+  margin-bottom: 10px;
+}
+
+li.info-item svg {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color: #2C323E;
+  width: 20px !important;
+}
+
+.contacts-info h2 {
+  margin-bottom: 30px;
+}
+
+.contacts-info {
+  height: 100%;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.our-capabilities h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.capability-block img {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.capability-block {
+  text-align: center;
+}
+
+.capability-block span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.capability-block p {
+  margin: 10px 0;
+}
+
+.our-capabilities {
+  padding: 50px 0;
+}
+
+.about-company--photo-1 {
+  background: url('../img/parallax-block-e.jpg') no-repeat;
+  height: 400px;
+  background-size: cover;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.no-padding{
+  padding: 0;
+}
+
+.about-company {
+  background: #fff;
+}
+
+.about-company .about-company--text-right {
+  padding: 60px 60px 0 50px;
+}
+
+.about-company--text-right h3 {
+  margin-bottom: 20px;
+}
+
+.about-company--text-right p {
+  text-align: justify;
+}
+
+.about-company--photo-2 {
+  background: url('/img/about-right-block-2.jpg') no-repeat;
+  height: 400px;
+  background-size: cover;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.about-company .about-company--text-left {
+  padding: 60px 50px 0 60px;
+}
+
+.about-company--text-left p {
+  text-align: justify;
 }

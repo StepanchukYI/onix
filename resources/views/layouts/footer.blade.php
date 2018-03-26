@@ -15,18 +15,16 @@
                 </div>
                 <div class="col">
                     <ul class="site-map-info">
-                        <li class="site-map-info--item"><a href="#">О нас</a></li>
-                        <li class="site-map-info--item"><a href="#">Наши проекты</a></li>
-                        <li class="site-map-info--item"><a href="#">Контакты</a></li>
+                        @foreach($menus as $menu)
+                            <li class="site-map-info--item"><a href="{{$menu->slug}}">{{$menu->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col">
                     <ul class="site-map-products">
-                        <li class="site-map-products--item"><a href="#">Модульные дома</a></li>
-                        <li class="site-map-products--item"><a href="#">Каркасное строительство</a></li>
-                        <li class="site-map-products--item"><a href="#">Коттетдженое строительство</a></li>
-                        <li class="site-map-products--item"><a href="#">Металлоконструкции и услуги</a></li>
-                        <li class="site-map-products--item"><a href="#">Стоимость</a></li>
+                        @foreach($menus as $category)
+                            <li class="site-map-products--item"><a href="{{$category->slug}}">{{$category->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col">
