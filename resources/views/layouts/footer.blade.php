@@ -16,14 +16,14 @@
                 <div class="col">
                     <ul class="site-map-info">
                         @foreach($menus as $menu)
-                            <li class="site-map-info--item"><a href="{{$menu->slug}}">{{$menu->title}}</a></li>
+                            <li class="site-map-info--item"><a href="{{url($menu->slug)}}">{{$menu->title}}</a></li>
                         @endforeach
                     </ul>
                 </div>
                 <div class="col">
                     <ul class="site-map-products">
-                        @foreach($menus as $category)
-                            <li class="site-map-products--item"><a href="{{$category->slug}}">{{$category->title}}</a></li>
+                        @foreach(\App\Models\Category::main()->get() as $category)
+                            <li class="site-map-products--item"><a href="{{url($category->slug)}}">{{$category->title}}</a></li>
                         @endforeach
                     </ul>
                 </div>
