@@ -23,5 +23,13 @@ Route::get('/projects', 'HomeController@projects')->name('home');
 
 
 
+Route::get('/object/{object}', 'CategoryController@object')->name('home');
+
+
+Route::get('/{category?}', 'CategoryController@index')->name('home');
+
+
+
+
 Route::post('/callback', 'EmailNotification@callback')->name('home');
 Route::post('/project', 'EmailNotification@projects')->name('home');

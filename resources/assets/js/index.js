@@ -23,10 +23,10 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 3000
     });
-    $('.counter-value').counterUp({
-        delay: 10,
-        time: 2000
-    });
+    // $('.counter-value').counterUp({
+    //     delay: 10,
+    //     time: 2000
+    // });
 });
 
 $(function () {

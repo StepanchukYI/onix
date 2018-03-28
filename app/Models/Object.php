@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Http\Requests\ObjectRequest;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 /**
  * Class Object
@@ -77,6 +78,11 @@ class Object extends Model
 				}
 			}
 		} );
+
+		static::addGlobalScope( 'objectAttribute', function ( Builder $builder )
+		{
+			$builder->with( 'objectAttributes' );
+		} );
 	}
 
 	/**
@@ -134,6 +140,22 @@ class Object extends Model
 	public function getCategoryAttribute()
 	{
 		return Category::where('id', $this->category_id)->first();
+	}
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function images()
+	{
+		return $this->hasMany(ObjectImage::class,'object_id', 'id');
+	}
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function objectAttributes()
+	{
+		return $this->hasMany( ObjectAttribute::class );
 	}
 
 
