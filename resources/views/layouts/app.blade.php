@@ -21,17 +21,12 @@
 
 @include('layouts.header')
 @include('layouts.footer')
-@include('layouts.navbar')
-
 <div id="app">
-
-
     @yield('header')
-    @yield('navbar')
+
     @yield('content')
 
     @yield('footer')
-
 </div>
 
 <!-- Scripts -->

@@ -16,26 +16,65 @@ class HomeController extends Controller
 	{
 		$category = Category::main()->with( 'subCategories' )->get();
 
-		return response()->render( 'pages.home.home' , [
-				'categoryes' => $category
-			] );
+		return response()->render( 'pages.home.home', [
+			'categoryes' => $category,
+			'title'      => 'Главная страница'
+		] );
 	}
 
 	public function about()
 	{
-		return response()->render( 'pages.about.about' );
+		$breadcrumbs = collect( [
+			[
+				'title' => 'Главная',
+				'slug'  => url( '/' )
+			],
+			[
+				'title' => "О нас"
+			]
+		] );
+
+		return response()->render( 'pages.about.about', [
+			'title'       => 'О нас',
+			'breadcrumbs' => $breadcrumbs
+		] );
 	}
 
 	public function contacts()
 	{
-		return response()->render( 'pages.contacts.contacts' );
+		$breadcrumbs = collect( [
+			[
+				'title' => 'Главная',
+				'slug'  => url( '/' )
+			],
+			[
+				'title' => "Контакты"
+			]
+		] );
+
+		return response()->render( 'pages.contacts.contacts', [
+			'title'       => 'Контакты',
+			'breadcrumbs' => $breadcrumbs
+		] );
 	}
 
 	public function projects()
 	{
-		$category = Category::main()->with( 'subCategories' )->get();
-		return response()->render( 'projects.projects' , [
-			'categoryes' => $category
+		$breadcrumbs = collect( [
+			[
+				'title' => 'Главная',
+				'slug'  => url( '/' )
+			],
+			[
+				'title' => "Наши проекты"
+			]
+		] );
+		$category    = Category::main()->with( 'subCategories' )->get();
+
+		return response()->render( 'projects.projects', [
+			'categoryes'  => $category,
+			'title'       => 'Наши проекты',
+			'breadcrumbs' => $breadcrumbs
 		] );
 	}
 }
